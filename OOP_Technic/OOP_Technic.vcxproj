@@ -19,7 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestA.cpp" />
+    <ClCompile Include="macro.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="testA.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inheritance.h" />
+    <ClInclude Include="macro.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

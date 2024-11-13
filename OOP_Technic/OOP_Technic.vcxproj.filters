@@ -16,10 +16,27 @@
     <Filter Include="소스 파일\Inheritance">
       <UniqueIdentifier>{8c304f98-19ba-4419-add4-6f4b470cefaa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Macro">
+      <UniqueIdentifier>{3c66ec89-a690-44f7-9526-ff119f9b1539}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestA.cpp">
+    <ClCompile Include="testA.cpp">
       <Filter>소스 파일\Inheritance</Filter>
     </ClCompile>
+    <ClCompile Include="macro.cpp">
+      <Filter>소스 파일\Macro</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inheritance.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="macro.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

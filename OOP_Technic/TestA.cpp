@@ -1,74 +1,53 @@
-#include <vector>
-#include <iostream>
-using namespace std;
+#include "inheritance.h"
 
-// 다음 클래스는 은행 계좌 정보를 담을 수 있도록 정의되어 있는 Account 클래스이다.
-class Account
+Account::Account(string num, int bal) : acc_num(num), balance(bal) {}
+
+string Account::getNum()
 {
-private:
-    string acc_num; // 계좌 번호
-    int balance; // 계좌 잔액
+    return acc_num;
+}
 
-public:
-    Account(string num, int bal) : acc_num(num), balance(bal)
-    {
-        acc_num = num;
-        balance = bal;
-    }
-
-    string getNum()
-    {
-        return acc_num;
-    }
-
-    int getBalance()
-    {
-        return balance;
-    }
-
-    void setNum(string num)
-    {
-        acc_num = num;
-    }
-
-    void setBalance(int bal)
-    {
-        balance = bal;
-    }
-
-    virtual void showInfo()
-    {
-        cout << "계좌 번호 : " << getNum() << endl;
-        cout << "계좌 잔액 : " << getBalance() << endl;
-    }
-};
-
-class KBAccount : public Account
+int Account::getBalance()
 {
-private:
-    int transferLimit; // 이체 한도
+    return balance;
+}
 
-public:
-    KBAccount(string num, int bal, int limit) : Account(num, bal), transferLimit(limit) {};
+void Account::setNum(string num)
+{
+    acc_num = num;
+}
 
-    int getLimit()
-    {
-        return transferLimit;
-    }
+void Account::setBalance(int bal)
+{
+    balance = bal;
+}
 
-    void setLimit(int limit)
-    {
-        transferLimit = limit;
-    }
+void Account::showInfo()
+{
+    cout << "계좌 번호 : " << getNum() << endl;
+    cout << "계좌 잔액 : " << getBalance() << endl;
+}
 
-    void showInfo() override
-    {
-        this->Account::showInfo();
-        cout << "이체 한도 : " << getLimit() << endl;
-    }
-};
+KBAccount::KBAccount(string num, int bal, int limit)
+    : Account(num, bal), transferLimit(limit) {}
 
-int main()
+int KBAccount::getLimit()
+{
+    return transferLimit;
+}
+
+void KBAccount::setLimit(int limit)
+{
+    transferLimit = limit;
+}
+
+void KBAccount::showInfo()
+{
+    Account::showInfo();
+    cout << "이체 한도 : " << getLimit() << endl;
+}
+
+void inheritanceTestA()
 {
     vector<KBAccount> accounts;
 
