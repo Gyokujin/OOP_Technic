@@ -18,7 +18,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Test1.cpp">
+    <ClCompile Include="TestA.cpp">
       <Filter>소스 파일\Inheritance</Filter>
     </ClCompile>
   </ItemGroup>
