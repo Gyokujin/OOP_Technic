@@ -5,12 +5,12 @@ int main()
 {
 	// inheritanceTestA();
 
-	/*PI pi;
+	PI pi;
 	pi.showPI();
 
 	Numbers numbers;
 	numbers.setNumbers();
-	numbers.getNumbers();*/
+	numbers.getNumbers();
 
 	Calculator calculator;
 }
